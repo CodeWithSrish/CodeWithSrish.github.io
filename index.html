@@ -19,8 +19,14 @@ body{font-family:var(--ff-body);background:#faf8ff;color:var(--text);overflow-x:
 
 /* TOPBAR */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:62px;background:rgba(250,248,255,0.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.logo{font-family:var(--ff-head);font-size:1.2rem;font-weight:900;cursor:pointer;background:linear-gradient(135deg,#0f0a1e,#9333ea);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.logo em{font-style:normal;-webkit-text-fill-color:var(--pink);background:none}
+.logo{font-family:var(--ff-head);font-size:1.4rem;font-weight:900;cursor:pointer;color: var(--text);}
+.logo em{
+  font-style:normal;
+  background:linear-gradient(135deg,#9333ea,#e8589a);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-left: 8px; /* Adds a little space after the emoji */
+}
 .nav{display:flex;gap:4px}
 .nbtn{padding:8px 16px;border-radius:30px;border:1.5px solid transparent;background:transparent;font-family:var(--ff-body);font-size:.82rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s}
 .nbtn:hover,.nbtn.on{background:rgba(147,51,234,.09);border-color:rgba(147,51,234,.25);color:var(--purple)}
@@ -143,7 +149,7 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
 <div class="mesh"></div>
 
 <nav class="topbar">
-  <div class="logo" onclick="goHome()">Srishti <em>Rajput</em></div>
+  <div class="logo" onclick="goHome()">🏠 <em>Home</em></div>
   <div class="nav">
     <button class="nbtn" onclick="showPg('about')">About</button>
     <button class="nbtn" onclick="showPg('projects')">Projects</button>
@@ -270,6 +276,14 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
       <div class="lmeta"><span class="ldot"></span><span class="llbl">Jupyter Notebook</span></div>
       <div class="tags"><span class="tag">Collaborative Filtering</span><span class="tag">ML</span><span class="tag">Recommender</span></div>
       <a href="https://github.com/CodeWithSrish/CineMatch" target="_blank" class="ghbtn">↗ View on GitHub</a>
+    </div>
+    <div class="card">
+      <span class="ci2">🦅</span>
+      <h3>FrauHawk — AI Financial Fraud Detection</h3>
+      <p>End-to-end fraud detection system on 11,142+ real transactions. XGBoost champion model with 100% accuracy, 99.8% F1, ROC-AUC 1.0, SHAP explainability, and ₹282 Cr projected annual savings. Features forensic feature engineering including the "Drain-to-Zero" pattern.</p>
+      <div class="lmeta"><span class="ldot py"></span><span class="llbl">Python · Jupyter Notebook</span></div>
+      <div class="tags"><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Fraud Detection</span><span class="tag">Feature Engineering</span><span class="tag">Scikit-learn</span></div>
+      <a href="https://github.com/CodeWithSrish/FrauHawk" target="_blank" class="ghbtn">↗ View on GitHub</a>
     </div>
   </div>
 </div>
@@ -437,7 +451,7 @@ function showPg(id) {
 }
 
 var KB=[
-  {k:['project','built','work','repo','cinematch','truthguard','credit','github'],a:"Srishti has 3 open-source projects on GitHub (@CodeWithSrish): 🛡️ TruthGuard AI — end-to-end NLP misinformation detection with Streamlit & explainability (⭐ starred). 💳 Credit Risk Intelligence Engine — XGBoost + SHAP, LIME, AIF360 fairness evaluation + Streamlit. 🎬 CineMatch — collaborative filtering movie recommender."},
+  {k:['project','built','work','repo','cinematch','truthguard','credit','frauhawk','fraud','github'],a:"Srishti has 4 open-source projects on GitHub (@CodeWithSrish): 🛡️ TruthGuard AI — end-to-end NLP misinformation detection with Streamlit & explainability (⭐ starred). 💳 Credit Risk Intelligence Engine — XGBoost + SHAP, LIME, AIF360 fairness evaluation + Streamlit. 🎬 CineMatch — collaborative filtering movie recommender. 🦅 FrauHawk — AI fraud detection on 11K+ transactions, 100% accuracy, ROC-AUC 1.0, ₹282 Cr savings."},
   {k:['skill','tech','python','ml','nlp','stack','know','language','tool','framework'],a:"Srishti's stack: Python, SQL, Scikit-learn, XGBoost, TensorFlow, PyTorch, Pandas, NumPy. NLP: HuggingFace, NLTK, spaCy, Transformers. Explainability: SHAP, LIME, AIF360. Deployment: Streamlit, FastAPI. She also has hands-on Generative AI experience."},
   {k:['education','study','degree','college','btech','diploma','boston','meri','university'],a:"Srishti's qualifications: 🎓 B.Tech ECE at MERI (MDU), expected May 2026. 📜 Diploma in Data Science & Generative AI — Boston Institute of Analytics (March 2026). 📜 Diploma in Artificial Intelligence — Boston Institute of Analytics (March 2026). 🏅 Diploma in ECE from Meerabai DSEU with 91% (2023)."},
   {k:['internship','hire','available','job','opportunit','open','position','recruit'],a:"Yes! Srishti is actively open to internships, part-time roles, and collaborations in Data Science, AI/ML, and NLP. She's based in New Delhi and is open to both remote and on-site roles in Delhi NCR. Reach her at srishtirajputonline@gmail.com or on LinkedIn."},
@@ -467,10 +481,13 @@ function doChat(){
   setTimeout(function(){ out.textContent=findAns(q); },400);
 }
 
-function qask(q){ document.getElementById('ci').value=q; doChat(); }
+function qask(q){
+  document.getElementById('ci').value = q;
+  doChat();
+}
 
-document.getElementById('ci').addEventListener('keydown',function(e){
-  if(e.key==='Enter') doChat();
+document.getElementById('ci').addEventListener('keydown', function(e){
+  if(e.key === 'Enter') doChat();
 });
 </script>
 </body>
