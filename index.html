@@ -315,7 +315,6 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
           <span class="tag">Prompt Engineering</span>
           <span class="tag">Transformers</span>
           <span class="tag">HuggingFace</span>
-          <span class="tag">LangChain</span>
           <span class="tag">NLTK</span>
         </div>
       </div>
@@ -360,6 +359,9 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
           <span class="tag">Git & GitHub</span>
           <span class="tag">Jupyter</span>
           <span class="tag">VS Code</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Pydantic</span>
+          <span class="tag">FastAPI</span>
         </div>
       </div>
     </div>
@@ -452,7 +454,7 @@ function showPg(id) {
 
 var KB=[
   {k:['project','built','work','repo','cinematch','truthguard','credit','frauhawk','fraud','github'],a:"Srishti has 4 open-source projects on GitHub (@CodeWithSrish): 🛡️ TruthGuard AI — end-to-end NLP misinformation detection with Streamlit & explainability (⭐ starred). 💳 Credit Risk Intelligence Engine — XGBoost + SHAP, LIME, AIF360 fairness evaluation + Streamlit. 🎬 CineMatch — collaborative filtering movie recommender. 🦅 FrauHawk — AI fraud detection on 11K+ transactions, 100% accuracy, ROC-AUC 1.0, ₹282 Cr savings."},
-  {k:['skill','tech','python','ml','nlp','stack','know','language','tool','framework'],a:"Srishti's stack: Python, SQL, Scikit-learn, XGBoost, TensorFlow, PyTorch, Pandas, NumPy. NLP: HuggingFace, NLTK, spaCy, Transformers. Explainability: SHAP, LIME, AIF360. Deployment: Streamlit, FastAPI. She also has hands-on Generative AI experience."},
+  {k:['skill','tech','python','ml','nlp','stack','know','language','tool','framework'],a:"Srishti's stack: Python, SQL, Scikit-learn, XGBoost, TensorFlow, PyTorch, Pandas, NumPy. NLP: HuggingFace, NLTK, Transformers. Explainability: SHAP, LIME, AIF360. Deployment: Streamlit, FastAPI. She also has hands-on Generative AI experience."},
   {k:['education','study','degree','college','btech','diploma','boston','meri','university'],a:"Srishti's qualifications: 🎓 B.Tech ECE at MERI (MDU), expected May 2026. 📜 Diploma in Data Science & Generative AI — Boston Institute of Analytics (March 2026). 📜 Diploma in Artificial Intelligence — Boston Institute of Analytics (March 2026). 🏅 Diploma in ECE from Meerabai DSEU with 91% (2023)."},
   {k:['internship','hire','available','job','opportunit','open','position','recruit'],a:"Yes! Srishti is actively open to internships, part-time roles, and collaborations in Data Science, AI/ML, and NLP. She's based in New Delhi and is open to both remote and on-site roles in Delhi NCR. Reach her at srishtirajputonline@gmail.com or on LinkedIn."},
   {k:['location','where','city','india','delhi','remote','relocat'],a:"Srishti is based in New Delhi, India. She's open to remote opportunities globally and on-site roles in Delhi NCR, and is willing to relocate for the right opportunity."},
@@ -467,7 +469,7 @@ function findAns(q){
     var s=0; item.k.forEach(function(kw){ if(ql.indexOf(kw)!==-1) s++; });
     if(s>top){ top=s; best=item.a; }
   });
-  return top>0 ? best : "Great question! Srishti is an AI/ML engineer with projects in NLP, ML explainability, and recommendation systems. Browse the sections above, or reach her at srishtirajputonline@gmail.com!";
+  return top>0 ? best : "Great question! Srishti is an aspiring Data Scientist & AI/ML engineer with projects in NLP, ML explainability, and recommendation systems. Browse the sections above, or reach her at srishtirajputonline@gmail.com!";
 }
 
 function doChat(){
