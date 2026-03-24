@@ -96,6 +96,8 @@ body{font-family:var(--ff-body);background:#faf8ff;color:var(--text);overflow-x:
 .tag{font-size:.7rem;font-weight:700;padding:4px 11px;border-radius:20px;background:linear-gradient(135deg,rgba(232,88,154,.09),rgba(147,51,234,.09));color:var(--purple);border:1px solid rgba(147,51,234,.18)}
 .ghbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:8px 16px;border-radius:30px;background:linear-gradient(135deg,rgba(232,88,154,.1),rgba(147,51,234,.1));border:1.5px solid rgba(147,51,234,.22);font-size:.78rem;font-weight:700;color:var(--purple);text-decoration:none;transition:all .22s}
 .ghbtn:hover{background:linear-gradient(135deg,#e8589a,#9333ea);color:#fff;border-color:transparent}
+.resumebtn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:40px;background:linear-gradient(135deg,#9333ea,#e8589a);border:none;font-family:var(--ff-body);font-size:.88rem;font-weight:700;color:#fff;text-decoration:none;cursor:pointer;transition:all .25s;box-shadow:0 6px 24px rgba(147,51,234,.35);margin-top:4px}
+.resumebtn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(232,88,154,.45)}
 .lmeta{display:flex;align-items:center;gap:6px;margin-top:8px}
 .ldot{width:10px;height:10px;border-radius:50%;background:#f0ad4e}
 .ldot.py{background:#3776ab}
@@ -152,6 +154,7 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
   <div class="logo" onclick="goHome()">🏠 <em>Home</em></div>
   <div class="nav">
     <button class="nbtn" onclick="showPg('about')">About</button>
+    <button class="nbtn" onclick="showPg('experience')">Experience</button>
     <button class="nbtn" onclick="showPg('projects')">Projects</button>
     <button class="nbtn" onclick="showPg('skills')">Skills</button>
     <button class="nbtn" onclick="showPg('contact')">Contact</button>
@@ -164,8 +167,11 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
   <div class="av">SR</div>
   <p class="eye">Hey there, I'm</p>
   <h1 class="hname"><span class="f">Srishti</span> <span class="l">Rajput</span></h1>
-  <p class="hrole"><strong>Aspiring Data Scientist &amp; AI/ML Engineer</strong> — building intelligent systems that turn data into real-world impact.</p>
-  <div class="badge"><span class="sdot"></span>Open to Internships &amp; Opportunities</div>
+  <p class="hrole"><strong>Data Scientist & AI/ML Engineer</strong> — 2+ years at Rockwell Automation. Now building intelligent systems for Industry 4.0 and beyond.</p>
+  <div class="badge"><span class="sdot"></span>Open to Full-time &amp; Internship Opportunities</div>
+  <a href="Srishti_Rajput_Resume.pdf" download="Srishti_Rajput_Resume.pdf" class="resumebtn">
+    ⬇ Download Resume
+  </a>
 
   <div class="chatbox">
     <div class="chatrow">
@@ -179,6 +185,7 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
 
   <div class="chips">
     <button class="chip" onclick="qask('What projects has Srishti built?')">🔬 Her projects</button>
+    <button class="chip" onclick="qask('What industrial experience does Srishti have?')">🏭 Her experience</button>
     <button class="chip" onclick="qask('What are her top skills?')">🧠 Her skills</button>
     <button class="chip" onclick="qask('Is she available for internships?')">💼 Availability</button>
     <button class="chip" onclick="qask('What is her educational background?')">🎓 Education</button>
@@ -186,6 +193,7 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
 
   <div class="pills">
     <button class="pill" onclick="showPg('about')"><span class="pi">😊</span><span class="pl">Me</span></button>
+    <button class="pill" onclick="showPg('experience')"><span class="pi">🏭</span><span class="pl">Experience</span></button>
     <button class="pill" onclick="showPg('projects')"><span class="pi">💼</span><span class="pl">Projects</span></button>
     <button class="pill" onclick="showPg('skills')"><span class="pi">🧠</span><span class="pl">Skills</span></button>
     <button class="pill" onclick="showPg('contact')"><span class="pi">👤</span><span class="pl">Contact</span></button>
@@ -237,12 +245,81 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
   </div>
 
   <div class="grid">
-    <div class="card"><span class="ci2">🎯</span><h3>Mission</h3><p>To design and deploy AI systems that are not just accurate, but explainable, fair, and impactful — from NLP pipelines to credit risk engines.</p></div>
-    <div class="card"><span class="ci2">✨</span><h3>Interests</h3><p>Machine Learning · NLP · Misinformation Detection · Recommendation Systems · Model Explainability · Generative AI</p></div>
+    <div class="card"><span class="ci2">🎯</span><h3>Mission</h3><p>To bridge industrial operations and data intelligence — building AI systems that are explainable, fair, and impactful for Industry 4.0 and beyond.</p></div>
+    <div class="card"><span class="ci2">✨</span><h3>Interests</h3><p>Industry 4.0 · Predictive Maintenance · Manufacturing Analytics · NLP · Explainable AI · Generative AI · Recommendation Systems</p></div>
     <div class="card"><span class="ci2">🔗</span><h3>GitHub</h3><p>All projects are open source under <strong>@CodeWithSrish</strong>. Working in Jupyter Notebook and Python with Streamlit deployments.</p><a href="https://github.com/CodeWithSrish" target="_blank" class="ghbtn">↗ github.com/CodeWithSrish</a></div>
-    <div class="card"><span class="ci2">🏆</span><h3>What I Bring</h3><ul><li>End-to-end ML pipelines</li><li>NLP &amp; text analytics</li><li>Model explainability (SHAP, LIME, AIF360)</li><li>Streamlit deployment</li><li>Cross-disciplinary: ECE + AI/Data Science</li></ul></div>
-    <div class="card"><span class="ci2">💡</span><h3>Currently Exploring</h3><p>Advanced fairness evaluation, production-ready ML deployment, Generative AI applications, and LLM-powered systems.</p></div>
-    <div class="card"><span class="ci2">🌟</span><h3>Specialisations</h3><p>Data Science · Generative AI · Artificial Intelligence · Electronics &amp; Communication — a rare cross-disciplinary combination.</p></div>
+    <div class="card"><span class="ci2">🏆</span><h3>What I Bring</h3><ul><li>2+ years industrial field experience (Rockwell Automation)</li><li>PLC, SCADA, HMI hands-on expertise</li><li>End-to-end ML pipelines &amp; NLP</li><li>Model explainability (SHAP, LIME, AIF360)</li><li>Rare OT + Data Science combination</li></ul></div>
+    <div class="card"><span class="ci2">💡</span><h3>Currently Exploring</h3><p>Predictive maintenance ML, industrial time-series analytics, production-ready ML deployment, and LLM-powered systems.</p></div>
+    <div class="card"><span class="ci2">🌟</span><h3>Specialisations</h3><p>Industrial Analytics · Data Science · Generative AI · Explainable AI · Electronics &amp; Communication — a rare cross-disciplinary combination.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div id="pg-experience" class="pg">
+<div class="inner">
+  <div class="ptitle">Work Experience</div>
+  <p class="psub">2+ years in industrial automation — the foundation that makes my data science different.</p>
+
+  <div style="background:linear-gradient(135deg,rgba(31,58,138,0.06),rgba(232,88,154,0.06));border:1.5px solid rgba(31,58,138,0.2);border-radius:24px;padding:32px;margin-bottom:28px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+      <div>
+        <h2 style="font-family:var(--ff-head);font-size:1.4rem;font-weight:900;margin-bottom:4px">Field Service Engineer</h2>
+        <div style="font-size:1rem;font-weight:700;color:#1F3A8A;margin-bottom:6px">Rockwell Automation</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="tag" style="background:rgba(31,58,138,0.1);color:#1F3A8A;border-color:rgba(31,58,138,0.25)">🏭 Industrial Automation</span>
+          <span class="tag" style="background:rgba(31,58,138,0.1);color:#1F3A8A;border-color:rgba(31,58,138,0.25)">PLC / SCADA</span>
+          <span class="tag" style="background:rgba(31,58,138,0.1);color:#1F3A8A;border-color:rgba(31,58,138,0.25)">Field Engineering</span>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:.85rem;font-weight:700;color:var(--muted)">2021 – 2024</div>
+        <div style="font-size:.82rem;color:var(--muted)">Pan-India</div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:20px">
+      <div class="card" style="border-color:rgba(31,58,138,0.2)">
+        <span class="ci2">🏗️</span>
+        <h3>IFFCO Government Project</h3>
+        <p>Independently managed end-to-end PLC upgrade at IFFCO (Indian Farmers Fertiliser Cooperative) — a large-scale government client. Full project scoping, on-site execution, and handover.</p>
+      </div>
+      <div class="card" style="border-color:rgba(31,58,138,0.2)">
+        <span class="ci2">🔧</span>
+        <h3>SCADA & PLC Upgrades</h3>
+        <p>Executed SCADA system upgrades and commissioning across food & beverage, steel manufacturing, and process industries — direct exposure to industrial data flows at scale.</p>
+      </div>
+      <div class="card" style="border-color:rgba(31,58,138,0.2)">
+        <span class="ci2">⚡</span>
+        <h3>Breakdown & AMC Support</h3>
+        <p>Performed real-time root cause analysis and resolution on live production systems under AMC contracts — zero tolerance for downtime in critical industrial environments.</p>
+      </div>
+      <div class="card" style="border-color:rgba(31,58,138,0.2)">
+        <span class="ci2">🤝</span>
+        <h3>Stakeholder Management</h3>
+        <p>Collaborated across engineers, plant operators, and management at geographically dispersed facilities — strong cross-functional communication in high-stakes environments.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;padding:16px 20px;background:rgba(255,255,255,0.7);border-radius:16px;border:1px solid rgba(31,58,138,0.15)">
+      <div style="font-size:.78rem;font-weight:700;color:#1F3A8A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Technologies Worked With</div>
+      <div class="tags">
+        <span class="tag">Allen-Bradley PLCs</span>
+        <span class="tag">FactoryTalk SCADA</span>
+        <span class="tag">HMI Systems</span>
+        <span class="tag">Drives & Motion Control</span>
+        <span class="tag">Industrial Networks</span>
+        <span class="tag">Food & Beverage</span>
+        <span class="tag">Steel Manufacturing</span>
+        <span class="tag">Process Industries</span>
+        <span class="tag">Fertilizer Plants</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,rgba(232,88,154,0.06),rgba(147,51,234,0.06));border:1.5px solid var(--border);border-radius:20px;padding:24px">
+    <div style="font-size:.85rem;font-weight:700;color:var(--purple);margin-bottom:8px">💡 Why This Matters for Data Science</div>
+    <p style="font-size:.9rem;color:var(--muted);line-height:1.75">Most data scientists have never set foot in a factory. I've spent 2+ years diagnosing live industrial systems, understanding how PLC sensor data is generated, why SCADA alarms fire, and what "downtime" actually costs a plant. This domain knowledge makes my <strong>predictive maintenance models</strong>, <strong>anomaly detection systems</strong>, and <strong>OEE analytics</strong> fundamentally different — I know what the data means, not just how to model it.</p>
   </div>
 </div>
 </div>
@@ -385,7 +462,7 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
       <div class="cico">🐙</div>
       <div><div class="clbl">GitHub</div><div class="cval">@CodeWithSrish</div></div>
     </a>
-    <a class="ccard" href="mailto:srishtirajputonline@gmail.com">
+    <a class="ccard" href="/cdn-cgi/l/email-protection#6c1f1e051f0418051e0d061c19180302000502092c0b010d0500420f0301">
     <div class="cico">📧</div>
     <div>
     <div class="clbl">Email</div>
@@ -397,6 +474,10 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
   <div>
     <div class="clbl">LinkedIn</div>
     <div class="cval">Connect on LinkedIn</div> </div>
+  </a>
+  <a class="ccard" href="Srishti_Rajput_Resume.pdf" download="Srishti_Rajput_Resume.pdf">
+    <div class="cico">📄</div>
+    <div><div class="clbl">Resume</div><div class="cval">Download PDF</div></div>
   </a>
   </div>
 </div>
@@ -425,7 +506,7 @@ a.ccard:hover{border-color:rgba(232,88,154,.5);transform:translateY(-4px);box-sh
 </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function goHome() {
   document.getElementById('home').className = 'on';
   document.querySelectorAll('.pg').forEach(function(p){ p.className='pg'; });
@@ -453,6 +534,7 @@ function showPg(id) {
 }
 
 var KB=[
+  {k:['experience','rockwell','automation','field','engineer','plc','scada','iffco','industrial','factory','manufacturing'],a:"Srishti worked 2+ years as a Field Service Engineer at Rockwell Automation. She independently managed a PLC upgrade project at IFFCO (a large government fertilizer client), executed SCADA upgrades across food, steel, and process industries, and handled breakdown diagnosis under live AMC conditions. She has hands-on experience with Allen-Bradley PLCs, FactoryTalk SCADA, HMIs, and drives — making her uniquely positioned for Industry 4.0 and manufacturing analytics roles."},
   {k:['project','built','work','repo','cinematch','truthguard','credit','frauhawk','fraud','github'],a:"Srishti has 4 open-source projects on GitHub (@CodeWithSrish): 🛡️ TruthGuard AI — end-to-end NLP misinformation detection with Streamlit & explainability (⭐ starred). 💳 Credit Risk Intelligence Engine — XGBoost + SHAP, LIME, AIF360 fairness evaluation + Streamlit. 🎬 CineMatch — collaborative filtering movie recommender. 🦅 FrauHawk — AI fraud detection on 11K+ transactions, 100% accuracy, ROC-AUC 1.0, ₹282 Cr savings."},
   {k:['skill','tech','python','ml','nlp','stack','know','language','tool','framework'],a:"Srishti's stack: Python, SQL, Scikit-learn, XGBoost, TensorFlow, PyTorch, Pandas, NumPy. NLP: HuggingFace, NLTK, Transformers. Explainability: SHAP, LIME, AIF360. Deployment: Streamlit, FastAPI. She also has hands-on Generative AI experience."},
   {k:['education','study','degree','college','btech','diploma','boston','meri','university'],a:"Srishti's qualifications: 🎓 B.Tech ECE at MERI (MDU), expected May 2026. 📜 Diploma in Data Science & Generative AI — Boston Institute of Analytics (March 2026). 📜 Diploma in Artificial Intelligence — Boston Institute of Analytics (March 2026). 🏅 Diploma in ECE from Meerabai DSEU with 91% (2023)."},
@@ -484,13 +566,10 @@ function doChat(){
 }
 
 function qask(q){
-  document.getElementById('ci').value = q;
+  var inp = document.getElementById('ci');
+  inp.value = q;
   doChat();
 }
-
-document.getElementById('ci').addEventListener('keydown', function(e){
-  if(e.key === 'Enter') doChat();
-});
 </script>
 </body>
 </html>
